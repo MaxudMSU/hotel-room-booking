@@ -1,0 +1,6 @@
+Solnishko
+101 Double 5500 F Sa Su
+102 Single 4000 M Tu W Th
+103 Double 30000 M Tu W Th
+104 Single 1000 M Tu W Th F Sa Su
+105 Single 3100 
