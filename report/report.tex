@@ -78,34 +78,101 @@
 
 Проект состоит из следующих модулей (пример):
 \begin{itemize}
-    \item \texttt{Book.hs}~--- реализация функций для диалога с пользователем и логики самого диалога;
-    \item \texttt{TypesHandle.hs}~--- реализация функций для работы с новыми типами данных;
     \item \texttt{DataTypes.hs}~--- объявление основных типов;
     \item \texttt{Constants.hs}~--- константы.
+    \item \texttt{TypesHandle.hs}~--- реализация функций для работы с новыми типами данных;
+    \item \texttt{Book.hs}~--- реализация функций для диалога с пользователем и логики самого диалога;
 
 \end{itemize}
 
-В модуле \texttt{Config.h} описаны следующие константные значения:
+В модуле \texttt{DataTypes.hs} описаны следующие типы:
 \begin{itemize}
-    \item \texttt{width} и \texttt{height}~--- размер игрового поля;
-    \item \texttt{defaultSpeed}~--- скорость передвижения игрока по умолчанию;
-    \item и т.\,д.
+    \item \texttt{Day}~--- описывает день недели, соответственно, 
+    содержит 7 значений;
+    \item \texttt{RoomType}~--- описывает тип комнаты: одиночная или двойная;
+    \item \texttt{Room}~--- структура для описания комнаты, имеющая поля:
+    \begin{itemize}
+        \item \texttt{roomId}~--- номер комнаты;
+        \item \texttt{rommType}~--- тип комнаты;
+        \item \texttt{roomPrice}~--- стоимость комнаты;
+        \item \texttt{roomBookWeek}~--- занятость комнаты на неделю.
+    \end{itemize}
+    \item \texttt{Hotel}~--- структура для описания отеля, имеющая поля:
+    \begin{itemize}   
+        \item \texttt{hotelName}~--- название отеля;
+        \item \texttt{hotelTypes}~--- типы комнат отеля;
+        \item \texttt{hotelRoomAmount}~--- количество комнат;
+        \item \texttt{hotelBusy}~--- занятость отеля на неделю.
+    \end{itemize}
+    \item \texttt{Request}~--- структура для описания запроса пользователя, имеющая поля:
+    \begin{itemize}  
+        \item \texttt{roomtype}~--- тип комнаты;
+        \item \texttt{days}~--- список дней для бронирования.
+    \end{itemize}
 \end{itemize}
 
-В модуле \texttt{Types.h} описаны следующие типы:
+В модуле \texttt{Constants.hs} описаны следующие константы:
 \begin{itemize}
-    \item \texttt{GameWord}~--- описывает игровой мир, состоящий из ...
-    \item \texttt{Player}~--- описывает игрока ...
-    \item и т.\,д.
+    \item \texttt{week}~--- список дней недели;
+    \item \texttt{weekS1}, \texttt{weekS2} и \texttt{weekS} ~--- списки 
+    дней недели в виде строк в полном и сокращённом 
+    виде соответственно, а также объединение этих списков;
+    \item \texttt{typeS}~--- список типов комнаты в виде строк;
+    \item \texttt{assocWeekSD}~--- ассоциативный список для перевода 
+    дня недели из строки в соответствующий тип данных;
+    \item \texttt{requestPrompts}~--- список подсказок при получении запроса;
+    \item \texttt{help}~--- список для проверки правильности запроса.
 \end{itemize}
 
-В модуле \texttt{Game.h} реализованы следующие функции:
+В модуле \texttt{TypesHandle.hs} описаны следующие функции:
 \begin{itemize}
-    \item \texttt{checkGameOver}~--- проверка окончания игры;
-    \item \texttt{getWinner}~--- определение победителя;
-    \item и т.\,д.
+    \item \texttt{transformFile}~--- перевод файла в виде строки в 
+    список комнат и структуру \texttt{Hotel};
+    \item \texttt{parseFile}~--- разбиение списка строк файла на имя отеля 
+    и список комнат;
+    \item \texttt{initializeHotel}~--- инициализация типа данных Hotel по его 
+    имени и списку комнат;
+    \item \texttt{initializeRooms}~--- инициализация типа данных Room по списку 
+    строк;
+    \item \texttt{weekBusy} и \texttt{weekBusyHelp}~--- создание списка занятости 
+    отеля на неделю;
+    \item \texttt{addToBusy}~--- обновление списка занятости;
+    \item \texttt{stringToRoom}, \texttt{roomToString}~--- перевод строки, 
+    соответствующей номеру отеля из файла, в тип данных \texttt{Room} 
+    и обратно;
+    \item \texttt{transformDaysToBool},\texttt{transformDaysFromBool}~--- 
+    перевод списка дней недели из списка строк или дней в формате 
+    \texttt{Day} в список True/False и обратно;
+    \item \texttt{updateRoom}~--- обновление одной комнаты в соответствии 
+    с запросом пользователя;
+    \item \texttt{updateRooms}~--- обновление списка комнат;
+    \item \texttt{updateHotel}~--- обновление отеля по одной комнате;
+    \item \texttt{findRooms}~--- поиск списка комнат, подходящих под 
+    запрос пользователя;
+    \item \texttt{isRoomBusy}~--- проверка занятности комнаты;
+    \item \texttt{showRoom}~--- преобразование комнаты в строку 
+    для вывода на экран;
+    \item \texttt{showRooms}~--- преобразование списка комнат в строку 
+    для вывода на экран;
+    \item \texttt{showBusy}, \texttt{showBusyHelp} и \texttt{showBusyDay}
+    ~--- преобразование списка занятости отеля в строку для вывода на экран;
+    \item \texttt{transform}~--- преобразование запроса из списка строк
+    в список запросов;
+    \item \texttt{transformDaysIntervalToBool} и \texttt{transformOneDay}
+    ~--- преобразование интервала дней недели в список True/False. 
 \end{itemize}
 
+В модуле \texttt{Book.hs} описаны следующие функции:
+\begin{itemize}
+    \item \texttt{fullRequestHandle}~--- обработка запроса пользователя;
+    \item \texttt{getInitialRequest}~--- получение начального запроса от пользователя
+    (может быть как полным, так и неполным);
+    \item \texttt{processReq}~--- уточнение запроса и поиск комнат по запросу;
+    \item \texttt{getRequest}~--- получение уточнённого запроса от 
+    пользователя;
+    \item \texttt{book}~--- бронирование комнаты;
+    \item \texttt{run}~--- основная функция обработки всех команд.
+\end{itemize}
 
 \section{Используемые библиотеки}
 
@@ -117,15 +184,25 @@
 
 \section{Сценарии работы с приложением}
 
-В этой части может содержаться краткая справка для пользователя приложения,
-например:
-\begin{itemize}
-    \item Запуск проекта, формат конфигурационных файлов, если есть и т.\,д.
-    \item Описание управления (консольное приложение/графический интерфейс/управление
-          мышью или с клавиатуры), взаимодействие с пользователем.
-    \item Режимы игры, выбор уровня, поведение приложения после окончания игры и т.\,п.
-\end{itemize}
+Для начала работы необходимо запустить в интерпретаторе ghci файл 
+\texttt{Main.hs}, а в нём~--- функцию \texttt{main}.
+После запуска пользователю будет предложено ввести название файла, в котором 
+хранится информация об отеле. После этого будет выведена информация об отеле
+(название), а также о доступных командах.
+\begin{center}
+\includegraphics[width=0.75\textwidth]{picture1.png}
+\end{center}
+Далее для начала процедуры бронирования нужно ввести \texttt{/start}.
+Пользователю будет предложено ввести запрос в виде "День заезда, день выезда, 
+тип комнаты". Последний параметр необязателен на этом этапе, его можно не вводить.
+\begin{center}
+    \includegraphics[width=0.75\textwidth]{picture2.png}
+\end{center}
+На этом этапе пользователь может отменить бронирование, либо ввести свой запрос.
+После ввода запроса будут выведены все доступные варианты.
+\begin{center}
+    \includegraphics[width=0.75\textwidth]{picture3.png}
+\end{center}
 
-Можно добавлять скриншоты.
 
 \end{document}

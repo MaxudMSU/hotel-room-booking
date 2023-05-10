@@ -112,11 +112,15 @@ run rooms hotel fileHotel = do
         "/start" -> do
             requestForBooking <- fullRequestHandle rooms
             case requestForBooking of
-                EmptyRequest -> putStrLn "Booking canceled."
+                EmptyRequest -> do 
+                    putStrLn "Booking canceled."
+                    run rooms hotel fileHotel
                 _ -> do
                     bookedRoom <- book rooms requestForBooking
                     case bookedRoom of
-                        EmptyRoom -> putStrLn "Booking canceled."
+                        EmptyRoom -> do
+                            putStrLn "Booking canceled."
+                            run rooms hotel fileHotel
                         _ -> do
                             let newRooms = updateRooms rooms bookedRoom
                                 newHotel = updateHotel hotel bookedRoom
@@ -131,5 +135,5 @@ run rooms hotel fileHotel = do
             writeFile fileHotel $ hotelName hotel ++ "\n" ++ newfile
             putStrLn "See you again!"
         _ -> do
-            run rooms hotel fileHotel
             putStrLn "Undefined command."
+            run rooms hotel fileHotel

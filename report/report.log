@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.8)  9 MAY 2023 14:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.8)  9 MAY 2023 18:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -373,31 +373,49 @@ LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line
 
 (/usr/share/texlive/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
 File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
-) [3] [4]
-(./report.aux) ) 
+) [3] [4] [5]
+<picture1.png, id=31, 491.8375pt x 208.78pt>
+File: picture1.png Graphic file (type png)
+<use picture1.png>
+Package pdftex.def Info: picture1.png  used on input line 193.
+(pdftex.def)             Requested size: 363.25278pt x 154.20168pt.
+<picture2.png, id=33, 424.58624pt x 168.63pt>
+File: picture2.png Graphic file (type png)
+<use picture2.png>
+Package pdftex.def Info: picture2.png  used on input line 199.
+(pdftex.def)             Requested size: 363.25278pt x 144.27791pt.
+
+[6 <./picture1.png>]
+<picture3.png, id=38, 419.5675pt x 189.70876pt>
+File: picture3.png Graphic file (type png)
+<use picture3.png>
+Package pdftex.def Info: picture3.png  used on input line 204.
+(pdftex.def)             Requested size: 363.25278pt x 164.24632pt.
+ [7 <./picture2.png> <./picture3.png>] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 3150 strings out of 479721
- 51606 string characters out of 5887698
- 349521 words of memory out of 5000000
- 21087 multiletter control sequences out of 15000+600000
- 478360 words of font info for 41 fonts, out of 8000000 for 9000
+ 3181 strings out of 479721
+ 52073 string characters out of 5887698
+ 351521 words of memory out of 5000000
+ 21113 multiletter control sequences out of 15000+600000
+ 479178 words of font info for 42 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
- 55i,5n,62p,298b,193s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/maxud/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/
-latt1440.600pk> </home/maxud/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec
-/tcrm1440.600pk> </home/maxud/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/
-labx1728.600pk> </home/maxud/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/l
-abx2074.600pk> </home/maxud/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/la
-rm1728.600pk> </home/maxud/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/lat
-i1728.600pk> </home/maxud/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx
-3583.600pk> </home/maxud/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm2
-488.600pk> </home/maxud/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm14
-40.600pk> </home/maxud/.texlive2021/texmf-var/fonts/pk/ljfour/lh/lh-t2a/lacc144
-0.600pk>
-Output written on report.pdf (3 pages, 83877 bytes).
+ 55i,5n,62p,233b,255s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/maxud/.texlive20
+21/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1440.600pk> </home/maxud/.texlive202
+1/texmf-var/fonts/pk/ljfour/lh/lh-t2a/latt1440.600pk> </home/maxud/.texlive2021
+/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1440.600pk> </home/maxud/.texlive202
+1/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1728.600pk> </home/maxud/.texlive2021
+/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx2074.600pk> </home/maxud/.texlive2021/
+texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm1728.600pk> </home/maxud/.texlive2021/t
+exmf-var/fonts/pk/ljfour/lh/lh-t2a/lati1728.600pk> </home/maxud/.texlive2021/te
+xmf-var/fonts/pk/ljfour/lh/lh-t2a/labx3583.600pk> </home/maxud/.texlive2021/tex
+mf-var/fonts/pk/ljfour/lh/lh-t2a/larm2488.600pk> </home/maxud/.texlive2021/texm
+f-var/fonts/pk/ljfour/lh/lh-t2a/larm1440.600pk> </home/maxud/.texlive2021/texmf
+-var/fonts/pk/ljfour/lh/lh-t2a/lacc1440.600pk>
+Output written on report.pdf (6 pages, 133145 bytes).
 PDF statistics:
- 272 PDF objects out of 1000 (max. 8388607)
- 51 compressed objects within 1 object stream
+ 322 PDF objects out of 1000 (max. 8388607)
+ 62 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
